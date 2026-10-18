@@ -40,6 +40,6 @@ Tools used
 SiEPIC tools, Klayout, Opics.
 
 Status and Next steps
-Design submitted to the openEBL call.
+Design submitted to the openEBL call through guide: Prof. Subhash C arya.
 Once fabricated: experimental transmission results compared to the theoretical results.
 
