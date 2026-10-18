@@ -1,19 +1,28 @@
-The path difference was 100.014um, and the wavelength was 1550nm. n_g(group index) for silicon at 1550nm is 4.2
+Parameters:
+ΔL = 100.014 µm = 100014 nm
+λ = 1550 nm
+n_g = 4.2 (group index of silicon at 1550 nm)
+
+Phase difference:
 Δφ = (2π/λ) · n_eff · ΔL
-FSR: λ² / (n_g · ΔL)
+(use n_eff here, not n_g; keep ΔL and λ in the same units)
 
-Calculations: 
-Δφ = (2π/λ) × n_eff × ΔL
-Δφ = (2π/1550) × 4.2 × 100.014
-Δφ ≈ 1.702 rad ≈ 97.53°
+Free Spectral Range (theory):
+FSR = λ² / (n_g · ΔL)
+FSR = 1550² / (4.2 × 100014)
+FSR ≈ 5.7194 nm
 
-Free Spectral Range (FSR):
-FSR = λ² / (n_g × ΔL)
+Extracting FSR from the simulated graph:
+FSR = λ(k+1) − λ(k)
+where λ(k) and λ(k+1) are the wavelengths of two adjacent transmission peaks (or two adjacent nulls).
+For N peaks, average over all of them:
+FSR = (λ(N) − λ(1)) / (N − 1)
 
-FSR = 1550² / (4.2 × 100.014)/1000
-FSR ≈ 5.7171 nm
+Group index from the graph:
+n_g = λ² / (FSR_graph · ΔL)
 
-simulation results:
+Simulation results:
+
 <img width="1000" height="500" alt="FSR" src="https://github.com/user-attachments/assets/9d919dbf-337b-47be-9ed2-c9bcc3c7e223" />
 
 FSR(simulated)=5.7184nm
