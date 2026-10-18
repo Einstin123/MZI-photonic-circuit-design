@@ -14,7 +14,7 @@ FSR ≈ 5.7194 nm
 
 Extracting FSR from the simulated graph:
 FSR = λ(k+1) − λ(k)
-where λ(k) and λ(k+1) are the wavelengths of two adjacent transmission peaks (or two adjacent nulls).
+where λ(k) and λ(k+1) are the wavelengths of two adjacent transmission peaks.
 For N peaks, average over all of them:
 FSR = (λ(N) − λ(1)) / (N − 1)
 
@@ -26,5 +26,6 @@ Simulation results:
 <img width="1000" height="500" alt="FSR" src="https://github.com/user-attachments/assets/9d919dbf-337b-47be-9ed2-c9bcc3c7e223" />
 
 FSR(simulated)=5.7184nm
+n_g= 4.2008
 
 
