@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+dL = 100.014
+neff0 = 2.4
+ng = 4.2
+lam0 = 1.55
+
+lam = np.linspace(1.50, 1.60, 20000)
+neff = neff0 - (ng - neff0) * (lam - lam0) / lam0
+phi = 2 * np.pi * neff * dL / lam
+T = np.cos(phi / 2) ** 2
+T_dB = 10 * np.log10(np.maximum(T, 1e-6))
+
+i = np.arange(1, len(T) - 1)
+pk = i[(T[i] > T[i - 1]) & (T[i] >= T[i + 1]) & (T[i] > 0.99)]
+wl_pk = lam[pk] * 1e3
+fsr_gr = np.mean(np.diff(wl_pk))
+
+print(f"FSR graph: {fsr_gr:.4f} nm ({len(pk)} peaks)")
+
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.plot(lam * 1e3, T_dB, lw=1.2)
+ax.plot(wl_pk, T_dB[pk], "rv", ms=5, label="Peaks")
+ax.set_xlabel("Wavelength (nm)")
+ax.set_ylabel("Transmission (dB)")
+ax.set_title(f"MZI transmission, dL = {dL} um")
+ax.set_ylim(-40, 3)
+ax.grid(True)
+ax.legend(loc="lower right")
+ax.text(0.02, 0.05, f"FSR = {fsr_gr:.4f} nm",
+        transform=ax.transAxes, bbox=dict(boxstyle="round", fc="white", ec="gray"))
+plt.tight_layout()
+plt.savefig("mzi_transmission.png", dpi=200)
+plt.show()
+
