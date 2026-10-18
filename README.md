@@ -37,7 +37,7 @@ Simulation results
 Transmission result
 
 Tools used
-SiEPIC tools, Klayout, Lumerical
+SiEPIC tools, Klayout, Opics
 
 Status and Next steps
 Design submitted to the openEBL call.
