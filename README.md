@@ -6,7 +6,7 @@ I built this as my first project in integrated photonic. I did this project to u
 
 The aim was to understand and verify the theory behind a Mach-Zehnder interferometer (MZI). I
 wanted to check that the transfer-matrix equations for the output power and the free spectral range
-(see notes_theory.md) agree with my simulations. And to see
+(see theory_results.md) agree with my simulations. And to see
 how the arm length difference, coupler splitting ratio and waveguide properties set the response.
 
 Along the way I learned how to use the software itself.
