@@ -21,12 +21,12 @@ I designed MZI using Klayout and SiEPIC library. My main goal for the design was
 I used 3 grating couplers( one as laser and two as detector), Silicon waveguide in TE mode, and Y - Branch splitter & combiner.
 
 Design specification
-Wavelength-1550 nm
-Armlength difference- 100.014 um.
-Waveguide width- 500nm
-Grating couplers: ebeam_gc_te_1550
-Y-splitter: ebeam_y_1550
-Y-recombiner: ebeam_bdc_te_1550
+Wavelength: 1550 nm
+Armlength difference: 100.014 um.
+Waveguide width: 500nm
+Splitter: Y-branch (ebeam_y_1550)
+Combiner: 2x2 broadband directional coupler (ebeam_bdc_te1550)
+Grating couplers: ebeam_gc_te1550
 
 Layout
 <img width="762" height="582" alt="MZI_Layout" src="https://github.com/user-attachments/assets/64107e69-67ae-4808-b407-2aeaf277d6a7" />
